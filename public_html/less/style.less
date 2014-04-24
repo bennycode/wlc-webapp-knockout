@@ -1,0 +1,23 @@
+@import "fonts.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  .standardText();
+
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &>*:first-child {
+    margin-top: 0 !important;
+  }
+
+  >*:last-child {
+    margin-bottom: 0 !important;
+  }
+}
