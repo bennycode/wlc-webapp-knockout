@@ -1,4 +1,5 @@
 @import "fonts.less";
+@import "../lib/lesshat-2.0.15.prefixed.less";
 
 * {
   margin: 0;
@@ -19,5 +20,15 @@ body {
 
   >*:last-child {
     margin-bottom: 0 !important;
+  }
+
+  #app {
+    #categories {
+      ol {
+        cursor: pointer;
+        list-style-type: none;
+        .lh-user-select(none);
+      }
+    }
   }
 }

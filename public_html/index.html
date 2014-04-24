@@ -9,16 +9,18 @@
   <body>
     <div id="app">
       <h1 id="pageTitle" data-bind="text: pageTitle"></h1>
-      <div id="categories">
+      <div class="page" id="categories">
         <ol data-bind="foreach: categories">
           <li data-bind="text: name, click: $parent.clickOnCategory "></li>
         </ol>
       </div>
-      <div id="playlist"></div>
-      <div id="videos"></div>
+      <div class="page" id="playlist"></div>
+      <div class="page" id="videos"></div>
     </div>
     <script src="lib/jquery-2.1.0.min.js"></script>
     <script src="lib/knockout-3.1.0.min.js"></script>
-    <script src="src/wlc.js"></script>
+    <script src="src/wlc/MainViewModel.js"></script>
+    <script src="src/wlc/ViewHandler.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>
