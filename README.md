@@ -1,2 +1,2 @@
-wlc-webapp-knockout
+We Love Coding Webapp (Knockout.js)
 ===================
