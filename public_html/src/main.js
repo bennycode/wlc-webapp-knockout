@@ -1,4 +1,3 @@
-var $viewContext = $('#app');
-
-var viewHandler = new wlc.ViewHandler($viewContext);
-viewHandler.init();
+var mainViewModel = new wlc.MainViewModel($('#wlc'));
+mainViewModel.init();
+mainViewModel.showCategories();

@@ -2,25 +2,42 @@
 <html>
   <head>
     <title>We Love Coding</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/build/style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/build/style.css" />
+    <link rel="stylesheet" href="css/build/loadingScreen.css" />
   </head>
-  <body>
-    <div id="app">
-      <h1 id="pageTitle" data-bind="text: pageTitle"></h1>
-      <div class="page" id="categories">
-        <ol data-bind="foreach: categories">
-          <li data-bind="text: name, click: $parent.clickOnCategory "></li>
-        </ol>
+  <body>   
+    <div id="wlc">
+      <div class="page on" id="loadingScreen">
+        <div class="loading">
+          <div class="spinner">
+            <div class="mask">
+              <div class="maskedCircle"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="page" id="playlist"></div>
-      <div class="page" id="videos"></div>
+      <div id="appContent">
+        <h1 id="pageTitle" data-bind="text: pageTitle"></h1>
+        <div class="page" id="categories">
+          <ol data-bind="foreach: categories">
+            <li data-bind="text: name, click: $parent.clickOnCategory.bind($parent)"></li>
+          </ol>
+        </div>
+        <div class="page" id="playlist">
+          <ol data-bind="foreach: playlists">
+            <li data-bind="text: name"></li>
+          </ol>
+        </div>
+        <div class="page" id="videos">Videos</div>
+      </div>
     </div>
     <script src="lib/jquery-2.1.0.min.js"></script>
     <script src="lib/knockout-3.1.0.min.js"></script>
+    <script src="src/namespaces.js"></script>
+    <script src="src/prototypes.js"></script>
     <script src="src/wlc/MainViewModel.js"></script>
-    <script src="src/wlc/ViewHandler.js"></script>
     <script src="src/main.js"></script>
   </body>
 </html>

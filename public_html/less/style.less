@@ -7,28 +7,22 @@
   border: 0;
 }
 
-body {
-  .standardText();
-
-  padding: 20px;
-  max-width: 960px;
-  margin: 0 auto;
-
-  &>*:first-child {
-    margin-top: 0 !important;
+#wlc {
+  .page {
+    display: none;
+    &.on {
+      display: block;
+    }
   }
-
-  >*:last-child {
-    margin-bottom: 0 !important;
-  }
-
-  #app {
-    #categories {
-      ol {
-        cursor: pointer;
-        list-style-type: none;
-        .lh-user-select(none);
-      }
+  #appContent {
+    .standardText();
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    ol {
+      cursor: pointer;
+      list-style-type: none;
+      .lh-user-select(none);
     }
   }
 }
